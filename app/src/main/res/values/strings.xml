@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Todo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort</string>
+    <string name="high_priority">High Priority</string>
+    <string name="low_priority">Low Priority</string>
+    <string name="delete_all_chores">Delete All Chores</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+
+    <string-array name="priorities">
+        <item>High priority</item>
+        <item>Medium priority</item>
+        <item>Low priority</item>
+    </string-array>
+</resources>
