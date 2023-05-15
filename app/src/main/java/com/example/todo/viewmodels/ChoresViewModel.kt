@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.todo.data.ChoresDatabase
 import com.example.todo.data.models.ChoresData
+import com.example.todo.data.models.Priority
 import com.example.todo.data.repository.ChoresRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

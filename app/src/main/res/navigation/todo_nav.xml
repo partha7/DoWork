@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.todo.fragments.ListFragment"
+        android:name="com.example.todo.ui.list.ListFragment"
         android:label="Pending Items"
         tools:layout="@layout/fragment_list" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
-        android:name="com.example.todo.fragments.AddItemFragment"
+        android:name="com.example.todo.ui.add.AddItemFragment"
         android:label="Add Chore"
         tools:layout="@layout/fragment_add_item" >
         <action
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateItemFragment"
-        android:name="com.example.todo.fragments.UpdateItemFragment"
+        android:name="com.example.todo.ui.update.UpdateItemFragment"
         android:label="Update Chore"
         tools:layout="@layout/fragment_update_item" >
         <action

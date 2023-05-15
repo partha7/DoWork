@@ -1,4 +1,4 @@
-package com.example.todo.fragments
+package com.example.todo.ui.add
 
 import android.os.Bundle
 import android.view.*

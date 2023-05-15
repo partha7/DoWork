@@ -1,20 +1,28 @@
-package com.example.todo.fragments
+package com.example.todo.ui.list
 
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.example.todo.MainActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.todo.R
 import com.example.todo.databinding.FragmentListBinding
+import com.example.todo.viewmodels.ChoresViewModel
 
 
 class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
+
+    private val choresViewModel: ChoresViewModel by viewModels()
+
+    private var choresListAdapter: ChoresListAdapter? = null
 
 //    val activity: MainActivity = requireActivity() as MainActivity
 
@@ -66,6 +74,20 @@ class ListFragment : Fragment() {
 
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
+        val rv = binding.todoListRv
+        rv.layoutManager = LinearLayoutManager(activity)
+        println("test111: getting data")
+        choresListAdapter = activity?.applicationContext?.let { ChoresListAdapter(it) }
+//        println("test111: init data ${choresViewModel.getAllChoresData}")
+        choresViewModel.getAllChoresData.observe(viewLifecycleOwner, Observer {
+            choresListAdapter?.setData(it)
+        })
+
+        rv.adapter = choresListAdapter
+
     }
+
+
+
 
 }
